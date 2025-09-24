@@ -1,0 +1,106 @@
+  /* Active link underline */
+  .custom-link.active {
+    border-bottom: 2px solid #0d6efd;
+    font-weight: 600;
+  }
+
+  /* Hover underline */
+  .custom-link:hover {
+    border-bottom: 2px solid #0d6efd;
+    transition: border-bottom 0.3s;
+  }
+
+  .btn-outline-custom {
+    color: #00ccff;
+    border-color: #00ccff;
+  }
+  .btn-outline-custom:hover {
+    color: #fff;
+    background-color: #00ccff;
+    border-color: #00ccff;
+  }
+
+  .colortext {
+    color: #5f687b;
+  }
+
+   /* Overlay hidden by default */
+  .overlay-text {
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .card:hover .overlay-text {
+    opacity: 1;
+  }
+
+   /* Tags */
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid currentColor;
+    border-radius: 20px;
+    padding: 2px 8px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: inherit;
+  }
+  .tag .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+  }
+
+    /* Keep tags and owner stacked only for very small screens < 400px */
+@media (max-width: 399px) {
+  .owner-tags {
+    flex-direction: column !important; 
+    align-items: flex-start !important; /* force left alignment */
+  }
+  .owner-tags > div {
+    margin-bottom: 0.5rem;
+  }
+}
+
+  /* Above 400px, revert to default flex row (Bootstrap layout) */
+  @media (min-width: 400px) {
+    .owner-tags {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .owner-tags > div {
+      margin-bottom: 0;
+    }
+  }
+
+
+.min-size {
+  width: 349px;  /* minimum width */
+  height: 349px; /* minimum height */
+  object-fit: cover; /* keeps aspect ratio and crops if needed */
+  }
+
+  /* Laptop ~1200px */
+@media (min-width: 1200px) {
+  .min-size {
+   width: 359.328px;  /* minimum width */
+    height: 359.328px; /* minimum height */
+    object-fit: cover; /* keeps aspect ratio and crops if needed */
+  }
+}
+
+/* Large screens ~1400px */
+@media (min-width: 1400px) {
+  .min-size {
+   width: 419.328px;  /* minimum width */
+    height: 419.328px; /* minimum height */
+    object-fit: cover; /* keeps aspect ratio and crops if needed */
+  }
+}
+
+.cover-onj {
+  object-fit: cover; /* Ensures the image covers the container */
+}

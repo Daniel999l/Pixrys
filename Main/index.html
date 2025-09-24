@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Pixrys</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <link rel="icon" href="../assets/img/logo1.png" type="image/png">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+   
+  <!-- Main CSS File -->
+  <link href="styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- NAV START-->
+     <nav class="navbar navbar-expand-lg bg-white shadow-sm rounded sticky-top" aria-label="Custom navbar">
+        <div class="container-fluid">
+            <!-- Brand always visible -->
+           <a id="twitterProfile" class="navbar-brand d-flex align-items-center fw-bold text-body-secondary" href="#" target="_blank" rel="noopener noreferrer">
+                <img id="pfp" src="../assets/img/mine/Mavros.jpg" alt="Profile" class="rounded-circle me-2 border border-2 border-dark" width="40" height="40">
+                    <span id="username">@username</span>
+            </a>
+
+
+            <!-- Toggler for small screens -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample"
+            aria-controls="navbarsExample" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="navbarsExample">
+            <!-- Center nav items -->
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link active custom-link" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link custom-link" href="#">Explore</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link custom-link" href="#">Settings</a>
+                </li>
+            </ul>
+
+            <!-- Right-side button -->
+            <div class="d-flex">
+                <button class="btn btn-outline-custom rounded-pill px-4 shadow-sm upload-btn">Upload</button>
+            </div>
+            </div>
+        </div>
+    </nav>
+    <!-- NAV END-->
+
+    <!-- MAIN SECTION START-->
+    <div class="container my-4">
+        <div class="row g-3">
+            <div class="col-12 col-md-4">
+                <div class="card h-100 position-relative overflow-hidden">
+                    <!-- Image with overlay -->
+                    <div class="position-relative">
+                        <img src="../assets/img/free/1.jpg" class="min-size card-img-top" alt="...">
+                        <div class="card-img-overlay d-flex align-items-center justify-content-center overlay-text">
+                            <p class="text-white fw-bold text-center">This artwork captures vivid abstract emotions. </p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem ipsum dolor</h5>
+                        <!-- Owner + tags row -->
+                        <div class="owner-tags d-flex justify-content-between align-items-center flex-wrap">
+                            <!-- Owner -->
+                            <div class="d-flex align-items-center mb-2 mb-sm-0">
+                                <img src="../assets/img/headshot/1.jpg" alt="Owner" class="rounded-circle me-2 cover-onj" width="30" height="30">
+                                <span class="fw-semibold">Daniel</span>
+                            </div>
+
+                            <!-- Tags -->
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="tag"><span class="dot bg-primary"></span>Irys</span>
+                                <span class="tag"><span class="dot bg-success"></span>Wallpaper</span>
+                                <span class="tag"><span class="dot bg-danger"></span>PFP</span>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Action row -->
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <!-- Download button -->
+                            <a href="#" class="btn btn-sm btn-light">
+                            <i class="fas fa-download"></i>
+                            </a>
+
+                            <!-- Heart toggle -->
+                            <button class="btn btn-sm btn-light" onclick="toggleHeart(this)">
+                            <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+             <div class="col-12 col-md-4">
+                <div class="card h-100 position-relative overflow-hidden">
+                    <!-- Image with overlay -->
+                    <div class="position-relative">
+                        <img src="../assets/img/free/2.jpg" class="min-size card-img-top" alt="...">
+                        <div class="card-img-overlay d-flex align-items-center justify-content-center overlay-text">
+                            <p class="text-white fw-bold text-center">A beautiful blend of light shades.</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem ipsum dolor</h5>
+                        <!-- Owner + tags row -->
+                        <div class="owner-tags d-flex justify-content-between align-items-center flex-wrap">
+                            <!-- Owner -->
+                            <div class="d-flex align-items-center mb-2 mb-sm-0">
+                                <img src="../assets/img/headshot/2.jpg" alt="Owner" class="rounded-circle me-2 cover-onj" width="30" height="30">
+                                <span class="fw-semibold">Olumide</span>
+                            </div>
+
+                            <!-- Tags -->
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="tag"><span class="dot bg-primary"></span>Irys</span>
+                                <span class="tag"><span class="dot bg-success"></span>Wallpaper</span>
+                                <span class="tag"><span class="dot bg-danger"></span>PFP</span>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Action row -->
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <!-- Download button -->
+                            <a href="#" class="btn btn-sm btn-light">
+                            <i class="fas fa-download"></i>
+                            </a>
+
+                            <!-- Heart toggle -->
+                            <button class="btn btn-sm btn-light" onclick="toggleHeart(this)">
+                            <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 col-md-4">
+                <div class="card h-100 position-relative overflow-hidden">
+                    <!-- Image with overlay -->
+                    <div class="position-relative">
+                        <img src="../assets/img/free/3.jpg" class="min-size card-img-top" alt="...">
+                        <div class="card-img-overlay d-flex align-items-center justify-content-center overlay-text">
+                            <p class="text-white fw-bold text-center">Unique patterns emerge from subtle colors.</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem ipsum dolor</h5>
+                        <!-- Owner + tags row -->
+                        <div class="owner-tags d-flex justify-content-between align-items-center flex-wrap">
+                            <!-- Owner -->
+                            <div class="d-flex align-items-center mb-2 mb-sm-0">
+                                <img src="../assets/img/headshot/3.jpg" alt="Owner" class="rounded-circle me-2 cover-onj" width="30" height="30">
+                                <span class="fw-semibold">Kelechi</span>
+                            </div>
+
+                            <!-- Tags -->
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="tag"><span class="dot bg-primary"></span>Irys</span>
+                                <span class="tag"><span class="dot bg-success"></span>Wallpaper</span>
+                                <span class="tag"><span class="dot bg-danger"></span>PFP</span>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Action row -->
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <!-- Download button -->
+                            <a href="#" class="btn btn-sm btn-light">
+                            <i class="fas fa-download"></i>
+                            </a>
+
+                            <!-- Heart toggle -->
+                            <button class="btn btn-sm btn-light" onclick="toggleHeart(this)">
+                            <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 col-md-4">
+                <div class="card h-100 position-relative overflow-hidden">
+                    <!-- Image with overlay -->
+                    <div class="position-relative">
+                        <img src="../assets/img/free/4.jpg" class="min-size card-img-top" alt="...">
+                        <div class="card-img-overlay d-flex align-items-center justify-content-center overlay-text">
+                            <p class="text-white fw-bold text-center">Modern digital art with vibrant textures.</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem ipsum dolor</h5>
+                        <!-- Owner + tags row -->
+                        <div class="owner-tags d-flex justify-content-between align-items-center flex-wrap">
+                            <!-- Owner -->
+                            <div class="d-flex align-items-center mb-2 mb-sm-0">
+                                <img src="../assets/img/headshot/4.jpg" alt="Owner" class="rounded-circle me-2 cover-onj" width="30" height="30">
+                                <span class="fw-semibold">Amina</span>
+                            </div>
+
+                            <!-- Tags -->
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="tag"><span class="dot bg-primary"></span>Irys</span>
+                                <span class="tag"><span class="dot bg-success"></span>Wallpaper</span>
+                                <span class="tag"><span class="dot bg-danger"></span>PFP</span>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Action row -->
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <!-- Download button -->
+                            <a href="#" class="btn btn-sm btn-light">
+                            <i class="fas fa-download"></i>
+                            </a>
+
+                            <!-- Heart toggle -->
+                            <button class="btn btn-sm btn-light" onclick="toggleHeart(this)">
+                            <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 col-md-4">
+                <div class="card h-100 position-relative overflow-hidden">
+                    <!-- Image with overlay -->
+                    <div class="position-relative">
+                        <img src="../assets/img/free/5.jpg" class="min-size card-img-top" alt="...">
+                        <div class="card-img-overlay d-flex align-items-center justify-content-center overlay-text">
+                            <p class="text-white fw-bold text-center">Inspired by nature and cityscapes combined.</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem ipsum dolor</h5>
+                        <!-- Owner + tags row -->
+                        <div class="owner-tags d-flex justify-content-between align-items-center flex-wrap">
+                            <!-- Owner -->
+                            <div class="d-flex align-items-center mb-2 mb-sm-0">
+                                <img src="../assets/img/headshot/5.jpg" alt="Owner" class="rounded-circle me-2 cover-onj" width="30" height="30">
+                                <span class="fw-semibold">Chike</span>
+                            </div>
+
+                            <!-- Tags -->
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="tag"><span class="dot bg-primary"></span>Irys</span>
+                                <span class="tag"><span class="dot bg-success"></span>Wallpaper</span>
+                                <span class="tag"><span class="dot bg-danger"></span>PFP</span>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Action row -->
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <!-- Download button -->
+                            <a href="#" class="btn btn-sm btn-light">
+                            <i class="fas fa-download"></i>
+                            </a>
+
+                            <!-- Heart toggle -->
+                            <button class="btn btn-sm btn-light" onclick="toggleHeart(this)">
+                            <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 col-md-4">
+                <div class="card h-100 position-relative overflow-hidden">
+                    <!-- Image with overlay -->
+                    <div class="position-relative">
+                        <img src="../assets/img/free/6.jpg" class="min-size card-img-top" alt="...">
+                        <div class="card-img-overlay d-flex align-items-center justify-content-center overlay-text">
+                            <p class="text-white fw-bold text-center">Minimalist design emphasizing clean geometric shapes.</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem ipsum dolor</h5>
+                        <!-- Owner + tags row -->
+                        <div class="owner-tags d-flex justify-content-between align-items-center flex-wrap">
+                            <!-- Owner -->
+                            <div class="d-flex align-items-center mb-2 mb-sm-0">
+                                <img src="../assets/img/headshot/6.jpg" alt="Owner" class="rounded-circle me-2 cover-onj" width="30" height="30">
+                                <span class="fw-semibold">Tunde</span>
+                            </div>
+
+                            <!-- Tags -->
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="tag"><span class="dot bg-primary"></span>Irys</span>
+                                <span class="tag"><span class="dot bg-success"></span>Wallpaper</span>
+                                <span class="tag"><span class="dot bg-danger"></span>PFP</span>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Action row -->
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <!-- Download button -->
+                            <a href="#" class="btn btn-sm btn-light">
+                            <i class="fas fa-download"></i>
+                            </a>
+
+                            <!-- Heart toggle -->
+                            <button class="btn btn-sm btn-light" onclick="toggleHeart(this)">
+                            <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 col-md-4">
+                <div class="card h-100 position-relative overflow-hidden">
+                    <!-- Image with overlay -->
+                    <div class="position-relative">
+                        <img src="../assets/img/free/7.jpg" class="min-size card-img-top" alt="...">
+                        <div class="card-img-overlay d-flex align-items-center justify-content-center overlay-text">
+                            <p class="text-white fw-bold text-center">Expressive strokes conveying dynamic human feelings.</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem ipsum dolor</h5>
+                        <!-- Owner + tags row -->
+                        <div class="owner-tags d-flex justify-content-between align-items-center flex-wrap">
+                            <!-- Owner -->
+                            <div class="d-flex align-items-center mb-2 mb-sm-0">
+                                <img src="../assets/img/headshot/7.jpg" alt="Owner" class="rounded-circle me-2 cover-onj" width="30" height="30">
+                                <span class="fw-semibold">Ngozi</span>
+                            </div>
+
+                            <!-- Tags -->
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="tag"><span class="dot bg-primary"></span>Irys</span>
+                                <span class="tag"><span class="dot bg-success"></span>Wallpaper</span>
+                                <span class="tag"><span class="dot bg-danger"></span>PFP</span>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Action row -->
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <!-- Download button -->
+                            <a href="#" class="btn btn-sm btn-light">
+                            <i class="fas fa-download"></i>
+                            </a>
+
+                            <!-- Heart toggle -->
+                            <button class="btn btn-sm btn-light" onclick="toggleHeart(this)">
+                            <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 col-md-4">
+                <div class="card h-100 position-relative overflow-hidden">
+                    <!-- Image with overlay -->
+                    <div class="position-relative">
+                        <img src="../assets/img/free/8.jpg" class="min-size card-img-top" alt="...">
+                        <div class="card-img-overlay d-flex align-items-center justify-content-center overlay-text">
+                            <p class="text-white fw-bold text-center">A stunning fusion of traditional techniques.</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem ipsum dolor</h5>
+                        <!-- Owner + tags row -->
+                        <div class="owner-tags d-flex justify-content-between align-items-center flex-wrap">
+                            <!-- Owner -->
+                            <div class="d-flex align-items-center mb-2 mb-sm-0">
+                                <img src="../assets/img/headshot/8.jpg" alt="Owner" class="rounded-circle me-2 cover-onj" width="30" height="30">
+                                <span class="fw-semibold">Emeka</span>
+                            </div>
+
+                            <!-- Tags -->
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="tag"><span class="dot bg-primary"></span>Irys</span>
+                                <span class="tag"><span class="dot bg-success"></span>Wallpaper</span>
+                                <span class="tag"><span class="dot bg-danger"></span>PFP</span>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Action row -->
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <!-- Download button -->
+                            <a href="#" class="btn btn-sm btn-light">
+                            <i class="fas fa-download"></i>
+                            </a>
+
+                            <!-- Heart toggle -->
+                            <button class="btn btn-sm btn-light" onclick="toggleHeart(this)">
+                            <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 col-md-4">
+                <div class="card h-100 position-relative overflow-hidden">
+                    <!-- Image with overlay -->
+                    <div class="position-relative">
+                        <img src="../assets/img/free/9.jpg" class="min-size card-img-top" alt="...">
+                        <div class="card-img-overlay d-flex align-items-center justify-content-center overlay-text">
+                            <p class="text-white fw-bold text-center">Bright colors create an energetic mood.</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem ipsum dolor</h5>
+                        <!-- Owner + tags row -->
+                        <div class="owner-tags d-flex justify-content-between align-items-center flex-wrap">
+                            <!-- Owner -->
+                            <div class="d-flex align-items-center mb-2 mb-sm-0">
+                                <img src="../assets/img/headshot/9.jpg" alt="Owner" class="rounded-circle me-2 cover-onj" width="30" height="30">
+                                <span class="fw-semibold">Zainab</span>
+                            </div>
+
+                            <!-- Tags -->
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="tag"><span class="dot bg-primary"></span>Irys</span>
+                                <span class="tag"><span class="dot bg-success"></span>Wallpaper</span>
+                                <span class="tag"><span class="dot bg-danger"></span>PFP</span>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Action row -->
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <!-- Download button -->
+                            <a href="#" class="btn btn-sm btn-light">
+                            <i class="fas fa-download"></i>
+                            </a>
+
+                            <!-- Heart toggle -->
+                            <button class="btn btn-sm btn-light" onclick="toggleHeart(this)">
+                            <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 col-md-4">
+                <div class="card h-100 position-relative overflow-hidden">
+                    <!-- Image with overlay -->
+                    <div class="position-relative">
+                        <img src="../assets/img/free/10.jpg" class="min-size card-img-top" alt="...">
+                        <div class="card-img-overlay d-flex align-items-center justify-content-center overlay-text">
+                            <p class="text-white fw-bold text-center">Intricate detailing highlights the artist’s skill.</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem ipsum dolor</h5>
+                        <!-- Owner + tags row -->
+                        <div class="owner-tags d-flex justify-content-between align-items-center flex-wrap">
+                            <!-- Owner -->
+                            <div class="d-flex align-items-center mb-2 mb-sm-0">
+                                <img src="../assets/img/headshot/10.jpg" alt="Owner" class="rounded-circle me-2 cover-onj" width="30" height="30">
+                                <span class="fw-semibold">Musa</span>
+                            </div>
+
+                            <!-- Tags -->
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="tag"><span class="dot bg-primary"></span>Irys</span>
+                                <span class="tag"><span class="dot bg-success"></span>Wallpaper</span>
+                                <span class="tag"><span class="dot bg-danger"></span>PFP</span>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Action row -->
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <!-- Download button -->
+                            <a href="#" class="btn btn-sm btn-light">
+                            <i class="fas fa-download"></i>
+                            </a>
+
+                            <!-- Heart toggle -->
+                            <button class="btn btn-sm btn-light" onclick="toggleHeart(this)">
+                            <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 col-md-4">
+                <div class="card h-100 position-relative overflow-hidden">
+                    <!-- Image with overlay -->
+                    <div class="position-relative">
+                        <img src="../assets/img/free/11.jpg" class="min-size card-img-top" alt="...">
+                        <div class="card-img-overlay d-flex align-items-center justify-content-center overlay-text">
+                            <p class="text-white fw-bold text-center">Surreal composition blending reality and imagination.</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem ipsum dolor</h5>
+                        <!-- Owner + tags row -->
+                        <div class="owner-tags d-flex justify-content-between align-items-center flex-wrap">
+                            <!-- Owner -->
+                            <div class="d-flex align-items-center mb-2 mb-sm-0">
+                                <img src="../assets/img/headshot/11.jpg" alt="Owner" class="rounded-circle me-2 cover-onj" width="30" height="30">
+                                <span class="fw-semibold">Ifeanyi</span>
+                            </div>
+
+                            <!-- Tags -->
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="tag"><span class="dot bg-primary"></span>Irys</span>
+                                <span class="tag"><span class="dot bg-success"></span>Wallpaper</span>
+                                <span class="tag"><span class="dot bg-danger"></span>PFP</span>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Action row -->
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <!-- Download button -->
+                            <a href="#" class="btn btn-sm btn-light">
+                            <i class="fas fa-download"></i>
+                            </a>
+
+                            <!-- Heart toggle -->
+                            <button class="btn btn-sm btn-light" onclick="toggleHeart(this)">
+                            <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+           <div class="col-12 col-md-4">
+                <div class="card h-100 position-relative overflow-hidden">
+                    <!-- Image with overlay -->
+                    <div class="position-relative">
+                        <img src="../assets/img/free/12.jpg" class="min-size card-img-top" alt="...">
+                        <div class="card-img-overlay d-flex align-items-center justify-content-center overlay-text">
+                            <p class="text-white fw-bold text-center">Bold lines accentuate the dramatic contrast.</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem ipsum dolor</h5>
+                        <!-- Owner + tags row -->
+                        <div class="owner-tags d-flex justify-content-between align-items-center flex-wrap">
+                            <!-- Owner -->
+                            <div class="d-flex align-items-center mb-2 mb-sm-0">
+                                <img src="../assets/img/headshot/12.jpg" alt="Owner" class="rounded-circle me-2 cover-onj" width="30" height="30">
+                                <span class="fw-semibold">Aisha</span>
+                            </div>
+
+                            <!-- Tags -->
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="tag"><span class="dot bg-primary"></span>Irys</span>
+                                <span class="tag"><span class="dot bg-success"></span>Wallpaper</span>
+                                <span class="tag"><span class="dot bg-danger"></span>PFP</span>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Action row -->
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <!-- Download button -->
+                            <a href="#" class="btn btn-sm btn-light">
+                            <i class="fas fa-download"></i>
+                            </a>
+
+                            <!-- Heart toggle -->
+                            <button class="btn btn-sm btn-light" onclick="toggleHeart(this)">
+                            <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="index.js"></script>
+
+</html>
