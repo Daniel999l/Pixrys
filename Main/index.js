@@ -5,7 +5,7 @@
     icon.classList.toggle("text-danger"); // red color
   }
 
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
 
 const firebaseConfig = {
@@ -39,11 +39,14 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 
+// Grab the logout button
+const logoutBtn = document.getElementById("logoutBtn");
+
 if (logoutBtn) {
   logoutBtn.addEventListener("click", async () => {
     try {
       await signOut(auth);
-      // Redirect back to login page after logout
+      // Redirect to login page after logout
       window.location.href = "../Auth/index.html";
     } catch (error) {
       console.error("Logout failed:", error);
