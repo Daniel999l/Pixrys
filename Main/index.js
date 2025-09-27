@@ -4,12 +4,15 @@ import { getAuth, onAuthStateChanged, signOut }
   from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
 
 // ---- TOGGLE HEART FUNCTION ----
-function toggleHeart(button) {
-  const icon = button.querySelector("i");
-  icon.classList.toggle("far"); // outline
-  icon.classList.toggle("fas"); // solid
-  icon.classList.toggle("text-danger"); // red color
-}
+document.querySelectorAll(".heart-button").forEach(button => {
+  button.addEventListener("click", () => {
+    const icon = button.querySelector("i");
+    icon.classList.toggle("far");
+    icon.classList.toggle("fas");
+    icon.classList.toggle("text-danger");
+  });
+});
+
 
 // ---- FIREBASE CONFIG ----
 const firebaseConfig = {
