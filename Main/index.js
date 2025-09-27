@@ -1,13 +1,17 @@
- function toggleHeart(button) {
-    const icon = button.querySelector("i");
-    icon.classList.toggle("far"); // outline
-    icon.classList.toggle("fas"); // solid
-    icon.classList.toggle("text-danger"); // red color
-  }
-
+// ---- IMPORTS AT THE TOP ----
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
-import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
+import { getAuth, onAuthStateChanged, signOut } 
+  from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
 
+// ---- TOGGLE HEART FUNCTION ----
+function toggleHeart(button) {
+  const icon = button.querySelector("i");
+  icon.classList.toggle("far"); // outline
+  icon.classList.toggle("fas"); // solid
+  icon.classList.toggle("text-danger"); // red color
+}
+
+// ---- FIREBASE CONFIG ----
 const firebaseConfig = {
   apiKey: "AIzaSyCqVGh1TeRg9a-tWzhUiGudMb-vX24znT0",
   authDomain: "twitter-login-demo-3ef40.firebaseapp.com",
@@ -21,6 +25,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
+// ---- ON AUTH STATE CHANGE ----
 onAuthStateChanged(auth, (user) => {
   if (user) {
     // Set PFP
@@ -39,17 +44,17 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 
-// Grab the logout button
+// ---- LOGOUT BUTTON ----
 const logoutBtn = document.getElementById("logoutBtn");
 
 if (logoutBtn) {
   logoutBtn.addEventListener("click", async () => {
     try {
-      await signOut(auth);
-      // Redirect to login page after logout
+      await signOut(auth);   // works now
       window.location.href = "../Auth/index.html";
     } catch (error) {
       console.error("Logout failed:", error);
     }
   });
 }
+
