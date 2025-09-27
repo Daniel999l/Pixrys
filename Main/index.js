@@ -38,3 +38,15 @@ onAuthStateChanged(auth, (user) => {
     window.location.href = "../Auth/index.html"; // Not logged in
   }
 });
+
+if (logoutBtn) {
+  logoutBtn.addEventListener("click", async () => {
+    try {
+      await signOut(auth);
+      // Redirect back to login page after logout
+      window.location.href = "../Auth/index.html";
+    } catch (error) {
+      console.error("Logout failed:", error);
+    }
+  });
+}
