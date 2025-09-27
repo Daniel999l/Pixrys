@@ -198,3 +198,22 @@ document.addEventListener('DOMContentLoaded', () => {
 document.getElementById("error_alrt").addEventListener("click", function () {
     alert("Due to safety reasons, signup via email is disabled for now. Please use Google or Twitter to sign in.");
   });
+
+  import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
+
+const auth = getAuth(); // make sure this is the same auth instance you used
+
+// Grab the button
+const logoutBtn = document.getElementById("logoutBtn");
+
+if (logoutBtn) {
+  logoutBtn.addEventListener("click", async () => {
+    try {
+      await signOut(auth);
+      // Redirect back to login page after logout
+      window.location.href = "../Auth/index.html";
+    } catch (error) {
+      console.error("Logout failed:", error);
+    }
+  });
+}
