@@ -24,15 +24,24 @@ const logoutBtn = document.getElementById("logoutBtn");
 // 3️⃣ Update UI with user info
 onAuthStateChanged(auth, (user) => {
   if (user) {
-    // Use Twitter profile pic + username
-    if (pfpEl) pfpEl.src = user.reloadUserInfo.profileImageURL || "";
-    if (usernameEl) usernameEl.textContent = "@" + (user.reloadUserInfo.screenName || "username");
-    if (profileLink) profileLink.href = "https://x.com/" + (user.reloadUserInfo.screenName || "");
+    // Log the full user object to see what is available
+    console.log("User object from Firebase:", user);
+
+    const twitterPFP = user.reloadUserInfo.profileImageURL;
+    const twitterUsername = user.reloadUserInfo.screenName;
+
+    console.log("Twitter PFP:", twitterPFP);
+    console.log("Twitter Username:", twitterUsername);
+
+    if (pfpEl) pfpEl.src = twitterPFP || "";
+    if (usernameEl) usernameEl.textContent = "@" + (twitterUsername || "username");
+    if (profileLink) profileLink.href = "https://x.com/" + (twitterUsername || "");
   } else {
-    // Not logged in → redirect
+    console.log("No user is logged in");
     window.location.href = "../Auth/index.html";
   }
 });
+
 
 // 4️⃣ Logout button
 if (logoutBtn) {
