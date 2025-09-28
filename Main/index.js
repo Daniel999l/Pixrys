@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
-import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
+import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
 
 // 1️⃣ Initialize Firebase
 const firebaseConfig = {
@@ -13,10 +13,28 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app); // now auth knows which app to use
+const auth = getAuth(app);
 
-// 2️⃣ Logout button
+// 2️⃣ Grab elements
+const pfpEl = document.getElementById("pfp");
+const usernameEl = document.getElementById("username");
+const profileLink = document.getElementById("twitterProfile");
 const logoutBtn = document.getElementById("logoutBtn");
+
+// 3️⃣ Update UI with user info
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    // Use Twitter profile pic + username
+    if (pfpEl) pfpEl.src = user.reloadUserInfo.profileImageURL || "";
+    if (usernameEl) usernameEl.textContent = "@" + (user.reloadUserInfo.screenName || "username");
+    if (profileLink) profileLink.href = "https://x.com/" + (user.reloadUserInfo.screenName || "");
+  } else {
+    // Not logged in → redirect
+    window.location.href = "../Auth/index.html";
+  }
+});
+
+// 4️⃣ Logout button
 if (logoutBtn) {
   logoutBtn.addEventListener("click", async () => {
     try {
