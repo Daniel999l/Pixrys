@@ -23,18 +23,18 @@ const logoutBtn = document.getElementById("logoutBtn");
 
 // 3️⃣ Update UI with username + reliable profile pic
 onAuthStateChanged(auth, (user) => {
-  if (user) {
+ if (user) {
     const twitterUsername = user.reloadUserInfo.screenName;
-    console.log("Logged in Twitter username:", twitterUsername);
+    console.log("Twitter Username:", twitterUsername);
 
-    // Use unavatar.io for a reliable Twitter profile pic
+    // Use unavatar.io for profile pic
     const twitterPFP = `https://unavatar.io/twitter/${twitterUsername}`;
-    console.log("Using Twitter PFP URL:", twitterPFP);
+    console.log("Twitter PFP URL:", twitterPFP);
 
     if (pfpEl) pfpEl.src = twitterPFP;
     if (usernameEl) usernameEl.textContent = "@" + twitterUsername;
     if (profileLink) profileLink.href = `https://x.com/${twitterUsername}`;
-  } else {
+} else {
     console.log("No user logged in");
     window.location.href = "../Auth/index.html";
   }
