@@ -21,27 +21,24 @@ const usernameEl = document.getElementById("username");
 const profileLink = document.getElementById("twitterProfile");
 const logoutBtn = document.getElementById("logoutBtn");
 
-// 3️⃣ Update UI with user info
+// 3️⃣ Update UI with username + reliable profile pic
 onAuthStateChanged(auth, (user) => {
   if (user) {
-    // Log the full user object to see what is available
-    console.log("User object from Firebase:", user);
-
-    const twitterPFP = user.reloadUserInfo.profileImageURL;
     const twitterUsername = user.reloadUserInfo.screenName;
+    console.log("Logged in Twitter username:", twitterUsername);
 
-    console.log("Twitter PFP:", twitterPFP);
-    console.log("Twitter Username:", twitterUsername);
+    // Use unavatar.io for a reliable Twitter profile pic
+    const twitterPFP = `https://unavatar.io/twitter/${twitterUsername}`;
+    console.log("Using Twitter PFP URL:", twitterPFP);
 
-    if (pfpEl) pfpEl.src = twitterPFP || "";
-    if (usernameEl) usernameEl.textContent = "@" + (twitterUsername || "username");
-    if (profileLink) profileLink.href = "https://x.com/" + (twitterUsername || "");
+    if (pfpEl) pfpEl.src = twitterPFP;
+    if (usernameEl) usernameEl.textContent = "@" + twitterUsername;
+    if (profileLink) profileLink.href = `https://x.com/${twitterUsername}`;
   } else {
-    console.log("No user is logged in");
+    console.log("No user logged in");
     window.location.href = "../Auth/index.html";
   }
 });
-
 
 // 4️⃣ Logout button
 if (logoutBtn) {
