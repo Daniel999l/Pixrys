@@ -27,8 +27,8 @@ onAuthStateChanged(auth, (user) => {
     const twitterUsername = user.reloadUserInfo.screenName;
     console.log("Twitter Username:", twitterUsername);
 
-    // Use unavatar.io for profile pic
-    const twitterPFP = `https://unavatar.io/twitter/${twitterUsername}`;
+    // Use X unavatar
+    const twitterPFP = `https://unavatar.io/x/${twitterUsername}`;
     console.log("Twitter PFP URL:", twitterPFP);
 
     if (pfpEl) pfpEl.src = twitterPFP;
